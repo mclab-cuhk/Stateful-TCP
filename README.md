@@ -1,6 +1,6 @@
 # Stateful-TCP
 This project presents the source code of Stateful-TCP, which has been accepted by IEEE ACCESS (Stateful-TCP - A New Approach to Accelerate TCP Slow-Start)
-# Requirement for the kernel version >= 4.09
+# Requirement for the kernel version >= 4.9
 1. Put both Makefile and scubic_release.c under the same dir.
 2. Compile the s-cubic_release.c file with command "make".
 3. You may need to install some libraries as indicated in the cmd, if you failed in executing the second step.
