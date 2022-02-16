@@ -5,8 +5,10 @@ This project presents the source code of Stateful-TCP, which has been accepted b
 2. Compile the scubic_release.c file with command "make".
 3. You may need to install some libraries as indicated in the cmd, if you failed in executing the second step.
 4. If everything goes well, under the same dir you will see several new files generated, scubic_release.ko is one of them.
-5. Then install the scubic_release.ko module into your machine by "install scubic_release.ko"
-6. No output means that you have successfully installed the module into you system. Otherwise likely memory allocation failed (unlikely though)
-7. Run scubic as the congestion control algorithm by "sysctl net.ipv4.tcp_congestion_control=scubic".
-8. Double check by "sysctl net.ipv4.tcp_congestion_control", if the output is "scubic", congratulation! 
-9. Enjoy the speedup!
+5. Then install the scubic_release.ko module into your machine by "install scubic_release.ko /lib/modules/$your-kernel-version$"
+6. sudo depmod
+7. sudo modprobe flash_release  (Make sure the 'secure boot' is disable)
+8. No output means that you have successfully installed the module into you system. Otherwise likely memory allocation failed (unlikely though)
+9. Run scubic as the congestion control algorithm by "sysctl net.ipv4.tcp_congestion_control=scubic".
+10. Double check by "sysctl net.ipv4.tcp_congestion_control", if the output is "scubic", congratulation! 
+11. Enjoy the speedup!
